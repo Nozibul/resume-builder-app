@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,14 +16,62 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
+   color: rgb(var(--foreground-rgb)); 
+  /*
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+@layer components {
+
+  /* icon */
+  .icon-hover{
+    @apply transition duration-300 delay-200 ease-in-out
+  }
+ 
+  .social-icon{
+    @apply text-orange-600 
+            text-[22px]
+            rounded-full 
+            p-2
+            hover:-translate-y-2
+            hover:bg-orange-700
+            hover:text-white
+            bg-white
+  }
+
+  /* Footer Section */
+  .footer-support{
+    @apply mt-3 flex flex-col pl-10 text-base font-semibold
+  }
+
+.footer-bg{
+  /* background-color: bg-gradient-to-t from-indigo-900 via-indigo-400 to-indigo-900; */
+  padding-top: 50px;
+  padding-bottom: 20px;
+  /* margin-top: -100px; */
+  z-index: -1;
+}
+.footerContact{
+  display: flex;
+  align-items:center;
+  padding-left: 40px;
+  color: white;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.footerIcon{
+  color: #f3510c;
+  font-size: 16px;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
 }
