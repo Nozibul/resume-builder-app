@@ -1,5 +1,6 @@
-import Footer from '../../components/footer/Footer'
-import Header from '../../components/header/Header'
+
+import Header from '@/components/header/Header'
+import FooterPage from '@/components/footer/FooterPage'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -10,7 +11,7 @@ export const metadata = {
   description: 'Resume Builder web application.',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children ,}) {
   return (
     <html lang="en">
       <head>
@@ -63,7 +64,7 @@ export default function RootLayout({ children }) {
         <main>
         <Header />
          <div>{children}</div>
-        <Footer />
+        <FooterPage />
         </main>
       </body>
     </html>

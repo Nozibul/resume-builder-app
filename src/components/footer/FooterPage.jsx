@@ -1,9 +1,11 @@
+'use client'
 
 import { FaPhoneVolume, FaSms, FaLocationArrow } from "react-icons/fa";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import SocialIcon from "../ui/icons/SocialIcon";
 import { TextHeader } from "../ui/text/Text";
+
 
 
 const FooterPage = () => {
