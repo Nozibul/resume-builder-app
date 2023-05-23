@@ -1,3 +1,4 @@
+import Hero from "@/components/hero/Hero"
 
 export const metadata = {
   title: 'Home - Resume Builder',
@@ -9,10 +10,8 @@ export default function Home() {
     <>
       <section className="w-full flex min-h-screen flex-col items-center">
 
-       <h2 className="text-2xl">Resume Builder</h2>
-       <h2 className="text-xl">Resume Builder</h2>
-     
-    </section>
-   </>
+      <Hero />
+      </section>
+   </> 
   )
 }

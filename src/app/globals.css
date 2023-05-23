@@ -46,6 +46,19 @@ body {
             bg-white
   }
 
+  /* hero */
+  .custom-img {
+    background-image: url('../../public/assets/images/hero (1).png');
+    
+  }
+  
+  .img-style {
+    transition: all 0.6s linear;
+    &:hover {
+        transform: scale(1.03);
+    }
+  }
+
   /* Footer Section */
   .footer-support{
     @apply mt-3 flex flex-col pl-10 text-base font-semibold
