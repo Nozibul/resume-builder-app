@@ -46,9 +46,10 @@ body {
             bg-white
   }
 
-  /* hero */
+  /* hero section */
   .custom-img {
     background-image: url('../../public/assets/images/hero (1).png');
+    width: 100%;
     
   }
   
@@ -58,6 +59,35 @@ body {
         transform: scale(1.03);
     }
   }
+
+  /* work section */
+  
+   .work-container {
+    height: 245px;
+    width: 245px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 22px rgba(18, 104, 217, 0.08);
+    background-color: white !important;
+    text-align: center;
+   }
+
+   .child-circle {
+    height: 210px;
+    width: 210px;
+    border-radius: 100%;
+    border: 6px solid #d9d8df;
+  }
+  .mini-circle {
+      height: 48px;
+      width: 48px;
+      border-radius: 100%;
+      background-color: green;
+      color: white !important;
+      position: absolute;
+      top: 35px;
+      right: 20px;
+   }
+
 
   /* Footer Section */
   .footer-support{

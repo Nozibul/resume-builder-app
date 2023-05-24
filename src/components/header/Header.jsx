@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import OthersBtn from '../ui/buttons/OthersBtn';
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -31,26 +32,30 @@ const Header = () => {
       style={{ backgroundColor: `${color}` }}
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
-        <Link href='/'>
+      <div className='w-full m-auto flex justify-between p-4 text-white'>
+        <Link className='ml-14' href='/'>
           <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
-            Captur
+            Capture
           </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
-          <li className='p-4'>
+          <li className='p-2'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-4'>
-            <Link href='/#gallery'>Gallery</Link>
+          <li className='p-2'>
+            <Link href='/#gallery'>Resume</Link>
           </li>
-          <li className='p-4'>
-            <Link href='/work'>Work</Link>
+          <li className='p-2'>
+            <Link href='/work'>CV</Link>
           </li>
-          <li className='p-4'>
-            <Link href='/contact'>Contact</Link>
+          <li className='p-2'>
+            <Link href='/contact'>Draft</Link>
           </li>
         </ul>
+
+        <div className='mr-14'>
+           <OthersBtn text="Sign In" />
+        </div>
 
         {/* Mobile Button */}
         <div onClick={handleNav} className='block sm:hidden z-10'>
