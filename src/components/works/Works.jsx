@@ -8,33 +8,52 @@ import { TextHeader, TextTitle } from "../ui/text/Text"
 const Works = () => {
   let textTitle = `How it's works`
   let textHeader = `Resume Writing with\n resume builder`
+  let workHeader = `Aliquam erat volutpat. Integer malesuada turpis fringilla suscipit. `
   
   return (
     <>
       <div className="w-full mt-12 mb-12">
         <TextTitle textTitle={textTitle} />
         <TextHeader textHeader={textHeader} />
-        <div className="border outline-double outline-purple-500 outline-1  w-full grid grid-cols-3 gap-4 mt-12">
-            <div className=" outline-violet-600 work-container flex justify-center items-center relative">
-              <div className="child-circle flex justify-center items-center">
-                <Image alt="document-image" src={DocumentImage} />
+        <div className="grid grid-cols-3 gap-4  justify-items-center w-full mt-12">
+           <div className="grid justify-items-center">
+              <div className=" outline-violet-600 work-container flex justify-center items-center relative">
+                <div className="child-circle flex justify-center items-center">
+                  <Image alt="document-image" src={DocumentImage} />
+                </div>
+                <div className="mini-circle flex justify-center items-center">01</div>                           
               </div>
-              <div className="mini-circle flex justify-center items-center">01</div>                            
-            </div>
-
-            <div className="work-container flex justify-center items-center relative">
-              <div className="child-circle flex justify-center items-center">
+              <div>
+                <TextTitle textTitle="Choose a Template" textSize="text-2xl" />
+                <TextHeader textHeader={workHeader} textSize="text-xl" />
+              </div>
+           </div>
+          
+            <div className="grid justify-items-center">
+              <div className=" outline-violet-600 work-container flex justify-center items-center relative">
+                <div className="child-circle flex justify-center items-center">
                 <Image alt="document-image" src={FrameImage} />
+                </div>
+                <div className="mini-circle flex justify-center items-center">02</div>                           
               </div>
-              <div className="mini-circle flex justify-center items-center">02</div>                          
+              <div>                
+                <TextTitle textTitle="Enter Information" textSize="text-2xl" />
+                <TextHeader textHeader={workHeader} textSize="text-xl" />
+              </div>
             </div>
 
-            <div className="work-container flex justify-center items-center relative">
-              <div className="child-circle flex justify-center items-center">
-                <Image alt="document-image" src={DownloadImage} />
+            <div className="grid justify-items-center">
+              <div className=" outline-violet-600 work-container flex justify-center items-center relative">
+                <div className="child-circle flex justify-center items-center">
+                <Image alt="document-image" src={DownloadImage} textSize="text-xl" />
+                </div>
+                <div className="mini-circle flex justify-center items-center">03</div>                           
               </div>
-              <div className="mini-circle flex justify-center items-center">03</div>                     
-            </div>       
+              <div>
+                <TextTitle textTitle="Download" textSize="text-2xl" />
+                <TextHeader textHeader={workHeader} textSize="text-xl" />
+              </div>
+            </div>      
         </div>
       </div>
     </>

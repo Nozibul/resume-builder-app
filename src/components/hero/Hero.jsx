@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { TextHeader, TextTitle } from "../ui/text/Text";
 import OthersBtn from "../ui/buttons/OthersBtn";
+import Resume from "../../../public/assets/images/hand-resume-copy-removebg-preview.png";
 
 const Hero = () => {
   let textHeader = `Whether you're looking to switch careers.`
   let textTitle = `Say Goodbye to Stressful\n Resume Writing with\n RESUME BUILDER`
+  
   return (
     <div className='flex w-full items-center h-screen justify-center mb-12 bg-fixed bg-center bg-cover custom-img'>
       {/* Overlay */}
@@ -20,11 +22,8 @@ const Hero = () => {
                <OthersBtn text="Get Started" />
               </div>
             </div>
-            <div className="">
-                
-                {/* <p>Resume builder</p> */}
-                {/* <Image className="img-fluid img-style" src={HomePageResumeImg} alt="resume-image" /> */}
-    
+            <div className="grid justify-items-center">
+               <Image className="mt-16 img-style" src={Resume} alt="resume-image" />         
             </div>
         </div>
       </div>
