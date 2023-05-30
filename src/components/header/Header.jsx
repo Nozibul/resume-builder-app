@@ -1,9 +1,13 @@
 'use client'
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import OthersBtn from '../ui/buttons/OthersBtn';
+import logo from "../../../public/assets/img_logo.png"
+import logo1 from "../../../public/assets/Untitled-removebg-preview (1).png"
+
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -32,13 +36,14 @@ const Header = () => {
       style={{ backgroundColor: `${color}` }}
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
-      <div className='w-full m-auto flex justify-between p-4 text-white'>
-        <Link className='ml-14' href='/'>
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
+      <div className='w-full m-auto flex justify-between p-2 text-white'>
+        <Link className='ml-14 w-20' href='/'>
+          {/* <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
             Capture
-          </h1>
+          </h1> */}
+          <Image src={logo} alt="logo" />
         </Link>
-        <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
+        <ul style={{ color: `${textColor}` }} className='mt-2 hidden sm:flex'>
           <li className='p-2'>
             <Link href='/'>Home</Link>
           </li>
@@ -53,7 +58,7 @@ const Header = () => {
           </li>
         </ul>
 
-        <div className='mr-14'>
+        <div className='mr-14 mt-4'>
            <OthersBtn text="Sign In" />
         </div>
 

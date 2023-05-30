@@ -1,9 +1,9 @@
 import { BiLocationPlus } from 'react-icons/bi';
 
-export const TextHeader = ({textHeader, textPosition, textSize}) => {
+export const TextHeader = ({textHeader, headerPosition, textSize}) => {
 
   // decide what to render
-  let headerPositions = textPosition ? "text-start" : 'text-center';
+  let headerPositions = headerPosition ? "text-start" : 'text-center';
   let headerSize = textSize ? textSize : 'text-2xl';
 
 
@@ -16,10 +16,10 @@ export const TextHeader = ({textHeader, textPosition, textSize}) => {
   )
 }
 
-export const TextTitle = ({textTitle, textPosition, textSize}) => {
+export const TextTitle = ({textTitle, titlePosition, textSize}) => {
 
   // decide what to render
-  let titlePositions = textPosition ? "text-start" : 'text-center';
+  let titlePositions = titlePosition ? "text-start" : 'text-center';
   let titleSize = textSize ? textSize : 'text-4xl';
 
 
