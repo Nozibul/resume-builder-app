@@ -1,8 +1,9 @@
 
-import Header from '@/components/header/Header'
 import FooterPage from '@/components/footer/FooterPage'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Header from '@/components/header/Header'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +13,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children ,}) {
+ 
   return (
     <html lang="en">
       <head>
@@ -61,11 +63,11 @@ export default function RootLayout({ children ,}) {
                 <title>Resume Builders</title>
       </head>
       <body className={inter.className}>
-        <main>
         <Header />
+        <main>
          <div>{children}</div>
-        <FooterPage />
         </main>
+        <FooterPage />
       </body>
     </html>
   )
