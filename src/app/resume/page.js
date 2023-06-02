@@ -1,12 +1,18 @@
 'use client'
 import Works from '@/components/works/Works'
 
+
+export const metadata = {
+  title: 'Resume',
+  description: 'Resume Builder Resume page.',
+}
+
 const page = () => {
   return (
-    <div>
+    <section>
       <p>resume</p>
       <Works />
-    </div>
+    </section>
   )
 }
 

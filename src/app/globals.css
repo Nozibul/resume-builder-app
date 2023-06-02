@@ -49,7 +49,6 @@ body {
   /* hero section */
   .custom-img {
     background-image: url('../../public/assets/images/hero (1).png');
-    width: 100%;
     
   }
   
@@ -89,6 +88,76 @@ body {
    }
 
 
+  /* template section */
+  .template-section {
+    background-color: rgb(240, 245, 245);
+  
+    .button-styles {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: rgb(99, 98, 98);
+      font-size: 18px;
+      margin: 0 10px;
+      width: 90px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgb(99, 98, 98);
+
+      &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          background-color: #f3510c;
+          top: 100%;
+          left: 0;
+          transition: all 0.4s linear;
+      }
+
+      &.active-btn {
+          color: #f3510c;
+
+          &::after {
+              width: 100%;
+          }
+      }
+  }
+  
+    .render-cv-list-widget {
+        .img-block {
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+
+            &:hover {
+                box-shadow: 0px 1px 8px rgba(203, 198, 198, 1);
+            }
+        }
+    }
+
+    .show-more-btn {
+        width: auto;
+        border-bottom: none;
+        color: var(--theme-secondary-color) !important;
+        border: 1px solid var(--theme-secondary-color);
+        font-size: 16px;
+        font-weight: 600;
+        padding: 6px 20px !important;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+    }
+    .disable-show-more-btn {
+        color: var(--theme-gray) !important;
+        border-color: var(--theme-gray) !important;
+        cursor: no-drop;
+    }
+  }
+}
+
+
   /* Footer Section */
   .footer-support{
     @apply mt-3 flex flex-col pl-10 text-base font-semibold
@@ -120,4 +189,3 @@ body {
   font-size: 45px;
 }
 
-}

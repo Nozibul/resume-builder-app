@@ -33,9 +33,10 @@ const FooterPage = () => {
                },
             
        ];
+       
 
     return (
-        <div className='footer-bg bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-100 via-violet-500 to-sky-900'>  
+        <div className='footer-bg bg-gradient-to-tr from-slate-900 via-purple-900 to-slate-900'>  
             <div className="grid grid-cols-4 w-10/12 gap-4 mx-auto">
               
                 <div className='w-64 mt-24 text-white item-center'>
@@ -108,5 +109,4 @@ const FooterPage = () => {
         </div>
     );
 };
-
 export default FooterPage;

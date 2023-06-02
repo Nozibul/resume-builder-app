@@ -12,7 +12,7 @@ const Works = () => {
   
   return (
     <>
-      <div className="w-full mt-12 mb-12">
+      <div className="w-full mt-8 mb-12">
         <TextTitle textTitle={textTitle} />
         <TextHeader textHeader={textHeader} />
         <div className="grid grid-cols-3 gap-4  justify-items-center w-full mt-12">

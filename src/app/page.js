@@ -1,4 +1,5 @@
 import Hero from "@/components/hero/Hero"
+import Templates from "@/components/templates/Templates"
 import Works from "@/components/works/Works"
 
 
@@ -11,8 +12,9 @@ export default function Home() {
   return (
     <>
       <section className="w-full flex min-h-screen flex-col items-center">
-       {/* <Hero /> */}
+       <Hero />
        <Works />
+       <Templates />
       </section>
    </> 
   )
