@@ -1,70 +1,70 @@
 export const CV_DATA = [
+  
     {
-        id: "cv-xhy0v8w2ar",
-        imageItem: "/assets/images/cv/canva_black_white_1.png",
-        path: "cv-template/TM-1001",
-    },
-    {
-        id: "cv-506adl0xwu",
+        id: "cv-1",
         imageItem: "/assets/images/cv/canva_black_white_2.png",
     },
     {
-        id: "cv-2nvlis20nb",
+        id: "cv-2",
         imageItem: "/assets/images/cv/canva_black_white_3.png",
     },
     {
-        id: "cv-ja7jhmmmvm",
+        id: "cv-3",
         imageItem: "/assets/images/cv/canva_black_white_4.png",
     },
     {
-        id: "cv-w0jd6wab2i",
+        id: "cv-4",
         imageItem: "/assets/images/cv/canva_black_white_1.png",
     },
     {
-        id: "cv-m0oxhrhcje",
+        id: "cv-5",
         imageItem: "/assets/images/cv/canva_black_white_2.png",
     },
     {
-        id: "cv-9qe3806uhv",
+        id: "cv-6",
         imageItem: "/assets/images/cv/canva_black_white_3.png",
     },
     {
-        id: "cv-hjl6xunk9c",
+        id: "cv-7",
         imageItem: "/assets/images/cv/canva_black_white_4.png",
+    },
+    {
+        id: "cv-8",
+        imageItem: "/assets/images/cv/canva_black_white_1.png",
     },
 ];
 
 export const RESUME_DATA = [
     {
-        id: "resume-5s3wwm35y7",
+        id: "resume-1",
         imageItem: "/assets/images/cv/canva_black_white_3.png",
     },
     {
-        id: "resume-3ldx280rxz",
+        id: "resume-2",
         imageItem: "/assets/images/cv/canva_black_white_2.png",
     },
     {
-        id: "resume-l015fy0jbw",
+        id: "resume-3",
         imageItem: "/assets/images/cv/canva_black_white_1.png",
     },
     {
-        id: "resume-ag5264y3xx",
+        id: "resume-4",
         imageItem: "/assets/images/cv/canva_black_white_4.png",
     },
     {
-        id: "resume-4w3i7dh1ym",
+        id: "resume-5",
         imageItem: "/assets/images/cv/canva_black_white_3.png",
     },
     {
-        id: "resume-pufb04b9jm",
+        id: "resume-6",
         imageItem: "/assets/images/cv/canva_black_white_2.png",
     },
     {
-        id: "resume-4jalflva3n",
+        id: "resume-7",
         imageItem: "/assets/images/cv/canva_black_white_1.png",
     },
     {
-        id: "resume-ik7obpnxes",
+        id: "resume-8",
         imageItem: "/assets/images/cv/canva_black_white_4.png",
     },
 ];

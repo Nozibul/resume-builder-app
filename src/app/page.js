@@ -1,3 +1,4 @@
+import ChooseUs from "@/components/chooseUs/ChooseUs"
 import Hero from "@/components/hero/Hero"
 import Templates from "@/components/templates/Templates"
 import Works from "@/components/works/Works"
@@ -15,6 +16,7 @@ export default function Home() {
        <Hero />
        <Works />
        <Templates />
+       <ChooseUs  />
       </section>
    </> 
   )

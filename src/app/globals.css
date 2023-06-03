@@ -114,7 +114,7 @@ body {
           background-color: #f3510c;
           top: 100%;
           left: 0;
-          transition: all 0.4s linear;
+          transition: all 0.5s linear;
       }
 
       &.active-btn {
@@ -125,37 +125,75 @@ body {
           }
       }
   }
-  
+    /* cv and resume list */
     .render-cv-list-widget {
-        .img-block {
-            cursor: pointer;
-            border-radius: 10px;
-            transition: all 0.3s linear;
+      .img-block {
+          cursor: pointer;
+          border-radius: 10px;
+          transition: all 0.3s linear;
 
-            &:hover {
-                box-shadow: 0px 1px 8px rgba(203, 198, 198, 1);
-            }
-        }
+          &:hover {
+              box-shadow: 0px 1px 8px rgba(203, 198, 198, 1);
+          }
+      }
     }
 
     .show-more-btn {
-        width: auto;
-        border-bottom: none;
-        color: var(--theme-secondary-color) !important;
-        border: 1px solid var(--theme-secondary-color);
-        font-size: 16px;
-        font-weight: 600;
-        padding: 6px 20px !important;
-        border-radius: 5px;
-        transition: all 0.3s linear;
+      width: auto;
+      border-bottom: none;
+      color: #f3510c !important;
+      border: 1px solid #f3510c;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 6px 20px !important;
+      border-radius: 5px;
+      transition: all 0.3s linear;
     }
+
     .disable-show-more-btn {
-        color: var(--theme-gray) !important;
-        border-color: var(--theme-gray) !important;
-        cursor: no-drop;
+      color: gray !important;
+      border-color: gray !important;
+      cursor: no-drop;
     }
   }
+
+
+ /* choose us section */
+
+ .box-1 {
+  background-color: #eceeff;
+  border-radius: 8px;
+  .img-styles {
+      background-color: rgba(18, 104, 217, 0.108);
+      padding: 10px;
+      border-radius: 100%;
+  }
 }
+.box-2 {
+  background-color: #fff6ec;
+  border-radius: 8px;
+  .img-styles {
+      background-color: rgba(253, 158, 47, 0.12);
+      padding: 10px;
+      border-radius: 100%;
+  }
+}
+.box-3 {
+  background-color: #ebffee;
+  border-radius: 8px;
+  .img-styles {
+      background-color: rgba(40, 188, 141, 0.12);
+      padding: 10px;
+      border-radius: 100%;
+  }
+}
+
+
+
+
+
+}
+
 
 
   /* Footer Section */

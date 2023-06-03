@@ -14,7 +14,7 @@ const Works = () => {
     <>
       <div className="w-full mt-8 mb-12">
         <TextTitle textTitle={textTitle} />
-        <TextHeader textHeader={textHeader} />
+        <TextHeader textHeader={textHeader} textSize="text-xl" />
         <div className="grid grid-cols-3 gap-4  justify-items-center w-full mt-12">
            <div className="grid justify-items-center">
               <div className=" outline-violet-600 work-container flex justify-center items-center relative">
