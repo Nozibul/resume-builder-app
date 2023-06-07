@@ -1,3 +1,4 @@
+import AccordionItem from "@/components/accordionItem/AccordionItem"
 import ChooseUs from "@/components/chooseUs/ChooseUs"
 import Hero from "@/components/hero/Hero"
 import Templates from "@/components/templates/Templates"
@@ -17,6 +18,7 @@ export default function Home() {
        <Works />
        <Templates />
        <ChooseUs  />
+       <AccordionItem />
       </section>
    </> 
   )
