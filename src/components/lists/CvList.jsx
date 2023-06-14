@@ -9,7 +9,7 @@ const CvList = ({activeComponent = 1, callBack = null }) => {
  const [data, setData] =useState([]);   
  const [moreItem, setMoreItem] = useState(4);
  const [loading, setLoading] = useState(true);
- console.log(data);
+
 
     useEffect(()=>{
      if(activeComponent === 1){

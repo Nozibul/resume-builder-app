@@ -1,11 +1,11 @@
 'use client'
 
 import { FaPhoneVolume, FaSms, FaLocationArrow } from "react-icons/fa";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import SocialIcon from "../ui/icons/SocialIcon";
 import { TextHeader } from "../ui/text/Text";
-
+import footerLogo from "../../../public/assets/cv-footer.png"
 
 
 const FooterPage = () => {
@@ -39,9 +39,9 @@ const FooterPage = () => {
         <div className='footer-bg bg-gradient-to-tr from-slate-900 via-purple-900 to-slate-900'>  
             <div className="grid grid-cols-4 w-10/12 gap-4 mx-auto">
               
-                <div className='w-64 mt-24 text-white item-center'>
-                  <p className="mt-4 ">Lorem ipsum dolor sit amet conse ctetur, 
-                    adipisicing elit. Ipsum harum doloribus animi!
+                <div className='w-64 text-white item-center'>
+                  <p className="mt-4 ">We’re certainly not the only content marketing company 
+                  out there, but we strive to be the best.!
                   </p>
                   <div className="mt-5">
                    <span className="text-2xl font-bold font-serif text-orange-500">Follow Us:</span>
@@ -51,7 +51,7 @@ const FooterPage = () => {
                   </div>
                 </div>
 
-                <div className='w-60 text-white  '>
+                <div className='w-60 text-white '>
                   <TextHeader textHeader="Support" />
                    <div className="mt-6 ml-10">
                     { supports?.map((support)=><Link key={support.pages} className='footer-support hover:-translate-y-1 icon-hover' href={`${support.link}`}>{support.pages}</Link>)}
@@ -86,17 +86,9 @@ const FooterPage = () => {
                      </div>
                 </div>
 
-                <div className='w-64 mt-24 text-white item-center'>
-                  {/* <img className="h-20" src={logo} alt="" /> */}
-                  <p className="mt-4 ">Lorem ipsum dolor sit amet conse ctetur, 
-                    adipisicing elit. Ipsum harum doloribus animi!
-                  </p>
-                  <div className="mt-5">
-                   <span className="text-2xl font-bold font-serif text-orange-500">Follow Us:</span>
-                   <div>
-                     <SocialIcon /> 
-                   </div>
-                  </div>
+                <div className='w-64 text-white item-center'>
+                 <Image className="w-28 h-28 mx-auto mt-16" src={footerLogo} alt='Footer Logo' />
+                 
                 </div>
               
             </div>
