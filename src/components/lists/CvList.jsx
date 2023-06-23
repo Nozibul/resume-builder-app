@@ -33,14 +33,14 @@ const CvList = ({activeComponent = 1, callBack = null }) => {
             <div className="grid grid-cols-4 gap-1">
                 {data?.slice(0, moreItem)?.map((item) => {
                  return (
-                    <div className="text-center py-2" key={item.id}>
+                  <div className="text-center py-2" key={item.id}>
                     <div
                         className="img-block"
                         onClick={() =>
                         callBack({
                             id: item.id,
-                            type: activeComponent === 1 ? "cv" : "resume",
-                        })
+                            type: activeComponent === 1 ? "cv" : "resume"
+                         })
                         }
                     >
                         <Image
@@ -51,7 +51,7 @@ const CvList = ({activeComponent = 1, callBack = null }) => {
                         priority={true}
                         />
                     </div>
-                    </div>
+                  </div>
                  );
                 })}
             </div>
