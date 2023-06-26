@@ -4,15 +4,13 @@ import CvList from '@/components/lists/CvList'
 import { TextTitle } from '@/components/ui/text/Text'
 import { useRouter } from "next/navigation";
 
-const Resume = () => {
+const Cv = () => {
 
   // define router
   const router = useRouter();
   
   const selectCvTemplate =({id})=>{
-    return router.push(`/cv/template_preview?_${id}`
-      // query: { _id: id }
-    )
+     return router.push(`/cv/template_preview?id=${id}`)
   };
 
   return (
@@ -29,4 +27,4 @@ const Resume = () => {
   )
 }
 
-export default Resume
+export default Cv
