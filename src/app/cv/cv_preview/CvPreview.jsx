@@ -9,15 +9,15 @@ import { getItemFromArray } from "../../../utils/appHelpers.js";
 const CvPreview = () => {
  // define next userRouter Hook
   const router = useRouter();
-  const { _id = null } = router.query;
+ 
 
-  const [resumeTemplate, setResumeTemplate] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [resumeTemplate, setResumeTemplate] = useState(null);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const findItem = getItemFromArray(CV_DATA, _id);
-    setResumeTemplate(findItem?.path || null);
-  }, [_id]);
+  // useEffect(() => {
+  //   const findItem = getItemFromArray(CV_DATA, _id);
+  //   setResumeTemplate(findItem?.path || null);
+  // }, [_id]);
 
 //   const RenderComponent = dynamic(
 //     () =>
@@ -35,7 +35,7 @@ const CvPreview = () => {
 
   return (
     <div className="builder-container">
-    {loading ? (
+    {/* {loading ? (
       <h1
         className="min-h-200 text-center flex justify-center items-center mx-auto"
       >
@@ -47,7 +47,7 @@ const CvPreview = () => {
       >
         No result is found!
       </h1>
-    ) : null}
+    ) : null} */}
   
       {/* <div className="container py-5">
         <RenderComponent />
