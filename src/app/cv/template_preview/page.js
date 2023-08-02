@@ -18,7 +18,6 @@ const TemplatePreview = () => {
     if(selectedItemId){
       const selectedItem = CV_DATA.find(item => item.id === selectedItemId);
       if (selectedItem) {
-
         setCarouselData([
           selectedItem,
           ...CV_DATA,
@@ -41,11 +40,11 @@ const TemplatePreview = () => {
     else if (newActiveSlideIndex >= carouselData.length) {
       newActiveSlideIndex = 0;
     }
-
     setActiveSlideIndex(newActiveSlideIndex);
   };
 
-  // navigate to back previous screen
+
+  // Navigate to back previous screen
   const router = useRouter();
   const navigateBack = () => router.back();
 
@@ -54,11 +53,12 @@ const TemplatePreview = () => {
     return router.push(`/cv/cv_builder?id=${carouselData[activeSlideIndex]?.id}`);
   }
 
+
   return (
     <>
       <div className="w-full">
         <div className="w-11/12 mx-auto py-12">
-          <TextTitle textTitle="CV Template Preview" /> {selectedItemId}
+          <TextTitle textTitle="CV Template Preview" />
           <p className='text-slate-600 text-center my-6'>Browse through our collection of templates and select the one you prefer.</p>
         </div>
         <div className="w-6/12 h-6/12 mx-auto">
@@ -78,10 +78,10 @@ const TemplatePreview = () => {
             ))}
           </div>
 
-          {/* <div className="flex justify-between pt-5 pb-3 pb-sm-0">
-            <button onClick={navigateBack} className="btn px-8 font-bold text-gray-800 bg-gradient-to-r from-pink-300 to-purple-300">Back</button>
+          <div className="flex justify-between pt-5 pb-3 pb-sm-0">
+            <button onClick={navigateBack} className="btn px-8 font-bold text-gray-800 bg-gradient-to-r from-pink-300 to-purple-300">Back </button>
             <button onClick={navigateToCvBuilder} className="btn px-8 font-bold text-gray-800 bg-gradient-to-r from-purple-300 to-pink-300">Next</button>
-          </div> */}
+          </div>
         </div>
       </div>
     </>
