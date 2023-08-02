@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { TextTitle, TextHeader } from "../ui/text/Text";
-import CvList from "../lists/CvList";
+import TemplatesList from "../lists/TemplatesList";
 import { useRouter } from "next/navigation";
 
 const Templates =()=> {
@@ -26,7 +26,7 @@ const Templates =()=> {
         });
     };
 
-  let workHeader = `Aliquam erat volutpat. Integer malesuada\n turpis fringilla suscipit. `
+  let workHeader = `Aliquam erat volutpat. Integer malesuada \n turpis fringilla suscipit. `
 
     return (
       <section className="w-full template-section">
@@ -56,7 +56,7 @@ const Templates =()=> {
           </div>
           
           <div className="py-4 render-cv-list-widget">
-            <CvList activeComponent={activeButton} callBack={MethodToSelectCvResume} />
+            <TemplatesList activeComponent={activeButton} callBack={MethodToSelectCvResume} />
           </div>
         </div>
       </section>

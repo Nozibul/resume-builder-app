@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { CV_DATA, RESUME_DATA } from "../../../local-json/CvResumeList";
 
-const CvList = ({activeComponent = 1, callBack = null }) => {
+const TemplatesList = ({activeComponent = 1, callBack = null }) => {
 
  const [data, setData] =useState([]);   
  const [moreItem, setMoreItem] = useState(4);
@@ -15,6 +15,7 @@ const CvList = ({activeComponent = 1, callBack = null }) => {
      if(activeComponent === 1){
         setData(CV_DATA)
      } else setData(RESUME_DATA)
+     
      if(moreItem > 4) setMoreItem(4);
      setLoading(false)
 
@@ -80,4 +81,4 @@ const CvList = ({activeComponent = 1, callBack = null }) => {
   )
 }
 
-export default CvList
+export default TemplatesList ;

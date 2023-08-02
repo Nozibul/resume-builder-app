@@ -21,11 +21,7 @@ const FooterPage = () => {
                 link: "/guide"
 
                },
-               {
-                pages:"Packages",
-                link: "/packages"
-
-               },
+             
                {
                 pages:"Our Blog",
                 link: "/blog"
@@ -53,7 +49,7 @@ const FooterPage = () => {
 
                 <div className='w-60 text-white '>
                   <TextHeader textHeader="Support" />
-                   <div className="mt-6 ml-10">
+                   <div className="mt-6 pb-6 ml-10">
                     { supports?.map((support)=><Link key={support.pages} className='footer-support hover:-translate-y-1 icon-hover' href={`${support.link}`}>{support.pages}</Link>)}
                    </div>
                 </div>

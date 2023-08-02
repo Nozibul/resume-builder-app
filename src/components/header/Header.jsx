@@ -3,46 +3,23 @@
 import { usePathname } from "next/navigation"
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import OthersBtn from '../ui/buttons/OthersBtn';
 import logo from '../../../public/assets/img_logo.png'
 
 const Header = () => {
- const pathname = usePathname()
+  const pathName = usePathname();
   const [nav, setNav] = useState(false);
-  // const [color, setColor] = useState('transparent');
-  // const [textColor, setTextColor] = useState('white');
 
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // useEffect(() => {
-  //   const changeColor = () => {
-  //     if (window.scrollY >= 90) {
-  //       setColor('#ffffff');
-  //       setTextColor('#000000');
-  //     } else {
-  //       setColor('transparent');
-  //       setTextColor('#ffffff');
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', changeColor);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', changeColor);
-  //   };
-  // }, []);
-
-
-
-//  const router = useRouter();
 
   const isActive = (path) => {    
-     return pathname === path ? 'text-white' : 'text-gray-300';
+     return pathName === path ? 'text-white' : 'text-gray-300';
   };
 
   return (
@@ -50,11 +27,12 @@ const Header = () => {
     <div className="bg-sky-900 left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="w-full m-auto flex justify-between p-2 text-white">
         <Link className="ml-14 w-20" href="/">
-            <Image src={logo} alt="logo" />
+            <Image src={logo} alt="logo" /> 
         </Link>
+      
         <ul  style={{ color: "black" }} className="mt-2 hidden sm:flex">
           <li className="p-2">
-            <Link href="/" className={`hover:text-gray-300 ${isActive('/')}`}>Home</Link>
+            <Link href="/" className={`hover:text-gray-300 ${isActive('/home')}`}> Home</Link>
           </li>
           <li className="p-2">
             <Link href="/resume" className={`hover:text-gray-300 ${isActive('/resume')}`}>Resume</Link>

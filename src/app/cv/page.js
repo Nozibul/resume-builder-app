@@ -1,6 +1,6 @@
 'use client'
 
-import CvList from '@/components/lists/CvList'
+import TemplatesList from '@/components/lists/TemplatesList'
 import { TextTitle } from '@/components/ui/text/Text'
 import { useRouter } from "next/navigation";
 
@@ -10,7 +10,7 @@ const Cv = () => {
   const router = useRouter();
   
   const selectCvTemplate =({id})=>{
-     return router.push(`/cv/template_preview?id=${id}`)
+     return router.push(`/cv/template_preview?_id=${id}`)
   };
 
   return (
@@ -20,7 +20,7 @@ const Cv = () => {
       <p className='text-slate-600 text-center my-6'>Browse through our collection of templates and 
         select the one you prefer</p>
       <div className="py-4 render-cv-list-widget">
-         <CvList activeComponent={1} callBack={selectCvTemplate} />
+         <TemplatesList activeComponent={1} callBack={selectCvTemplate} />
       </div>
     </div>
    </section>

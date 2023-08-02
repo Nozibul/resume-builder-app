@@ -6,11 +6,10 @@ export const TextHeader = ({textHeader, headerPosition, textSize}) => {
   let headerPositions = headerPosition ? "text-start" : 'text-center';
   let headerSize = textSize ? textSize : 'text-2xl';
 
-
   return (
     <>
       <article className={`${headerPositions} mt-4 mb-4`}>
-         <span style ={{whiteSpace:'pre-line'}} className={` ${headerSize} font-bold font-serif text-orange-500 `}>{textHeader}</span>
+        <span style ={{whiteSpace:'pre-line'}} className={` ${headerSize} font-bold font-serif text-orange-500 `}>{textHeader}</span>
       </article>
     </>
   )
@@ -22,11 +21,10 @@ export const TextTitle = ({textTitle, titlePosition, textSize}) => {
   let titlePositions = titlePosition ? "text-start" : 'text-center';
   let titleSize = textSize ? textSize : 'text-4xl';
 
-
   return (
     <>
       <article className={ `${titlePositions}  `}>
-       <span style ={{whiteSpace:'pre-line'}} className={` ${titleSize} font-bold font-serif text-[rgb(17, 17, 78)] `}>{textTitle}</span>
+        <span style ={{whiteSpace:'pre-line'}} className={` ${titleSize} font-bold font-serif text-[rgb(17, 17, 78)] `}>{textTitle}</span>
       </article>
   </>
   )

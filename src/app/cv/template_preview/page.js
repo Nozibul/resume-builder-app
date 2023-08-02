@@ -11,10 +11,11 @@ const TemplatePreview = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const searchParams = useSearchParams();
-  const selectedItemId = searchParams.get('id');
+  const selectedItemId = searchParams.get('_id');
+ 
 
   useEffect(() => {
-    if (selectedItemId) {
+    if(selectedItemId){
       const selectedItem = CV_DATA.find(item => item.id === selectedItemId);
       if (selectedItem) {
 
@@ -25,6 +26,7 @@ const TemplatePreview = () => {
       }
     }
   }, [selectedItemId]);
+
 
   const handleMouseScroll = (event) => {
     const delta = Math.sign(event.deltaY); // Get the direction of scroll (1 for down, -1 for up)
@@ -56,7 +58,7 @@ const TemplatePreview = () => {
     <>
       <div className="w-full">
         <div className="w-11/12 mx-auto py-12">
-          <TextTitle textTitle="CV Template Preview" />
+          <TextTitle textTitle="CV Template Preview" /> {selectedItemId}
           <p className='text-slate-600 text-center my-6'>Browse through our collection of templates and select the one you prefer.</p>
         </div>
         <div className="w-6/12 h-6/12 mx-auto">
@@ -76,10 +78,10 @@ const TemplatePreview = () => {
             ))}
           </div>
 
-          <div className="flex justify-between pt-5 pb-3 pb-sm-0">
+          {/* <div className="flex justify-between pt-5 pb-3 pb-sm-0">
             <button onClick={navigateBack} className="btn px-8 font-bold text-gray-800 bg-gradient-to-r from-pink-300 to-purple-300">Back</button>
             <button onClick={navigateToCvBuilder} className="btn px-8 font-bold text-gray-800 bg-gradient-to-r from-purple-300 to-pink-300">Next</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
