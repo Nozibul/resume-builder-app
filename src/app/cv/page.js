@@ -10,7 +10,7 @@ const Cv = () => {
   const router = useRouter();
   
   const selectCvTemplate =({id})=>{
-     return router.push(`/cv/template_preview?_id=${id}`)
+     return router.push(`/cv/cv_template_preview?_id=${id}`)
   };
 
   return (

@@ -9,10 +9,7 @@ const Resume = () => {
   const router = useRouter();
 
   const selectResumeTemplate = ({ id }) => {
-    return router.push({
-      pathName: "/resume/template-preview",
-      query: { _id: id },
-    });
+     return router.push(`/resume/resume_template_preview?_id=${id}`)
   };
 
   return (

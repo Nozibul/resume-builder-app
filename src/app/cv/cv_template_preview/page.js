@@ -1,7 +1,27 @@
 'use client'
 
-import { TextTitle } from "@/components/ui/text/Text";
+import CarouselTemplate from "@/components/carouselTemplate/CarouselTemplate";
 import { CV_DATA } from "../../../../local-json/CvResumeList";
+
+
+const CvTemplatePreview = () => {
+  return (
+    <CarouselTemplate title="CV Template Preview" data={CV_DATA}/>
+  );
+};
+
+export default CvTemplatePreview;
+
+
+
+
+
+
+
+/* 'use client'
+
+import { TextTitle } from "@/components/ui/text/Text";
+import { CV_DATA, RESUME_DATA } from "../../../../local-json/CvResumeList";
 import { useSearchParams, useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -89,3 +109,4 @@ const TemplatePreview = () => {
 };
 
 export default TemplatePreview;
+ */
