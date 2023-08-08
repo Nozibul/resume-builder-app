@@ -5,7 +5,6 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-
 const CarouselTemplate = ({ title, data }) => {
   const [carouselData, setCarouselData] = useState([]);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -14,18 +13,18 @@ const CarouselTemplate = ({ title, data }) => {
   const searchParams = useSearchParams();
   const selectedItemId = searchParams.get("_id");
 
-
   useEffect(() => {
-    if(selectedItemId){
-      const selectedItem = data.find(item => item.id === selectedItemId);
+    if (selectedItemId) {
+      const selectedItem = data.find((item) => item.id === selectedItemId);
       if (selectedItem) {
-        setCarouselData([ selectedItem,...data ]);
-        setActiveSlideIndex(0); 
+        setCarouselData([selectedItem, ...data]);
+        setActiveSlideIndex(0);
       }
     }
   }, [selectedItemId, data]);
 
 
+  // Mouse Scroll Handler
   const handleMouseScrollCarousel = (event) => {
     if (scrolling) return; // Ignore scroll events when scrolling is already in progress
     setScrolling(true);
@@ -50,16 +49,20 @@ const CarouselTemplate = ({ title, data }) => {
   };
 
 
-    // Navigate to back previous screen
-    const router = useRouter();
-    const navigateBack = () => router.back();
-  
-    // Redirect user to cv-builder component with cv id
-    const navigateToCvBuilder = () => {
-      console.log(carouselData[activeSlideIndex]?.id)
-      return router.push(`/cv/cv_builder?id=${carouselData[activeSlideIndex]?.id}`);
-    }
-  
+  // Navigate to back previous screen
+  const router = useRouter();
+  const navigateBack = () => router.back();
+
+  // Redirect user to cv-builder component with cv id
+  const navigateToCvBuilder = () => {
+    const matchNavigate = carouselData[activeSlideIndex]?.id.match(/[c]/gi);
+
+    return router.push(
+      matchNavigate === "c"
+        ? `/cv/cv_builder?id=${carouselData[activeSlideIndex]?.id}`
+        : `/resume/resume_builder?id=${carouselData[activeSlideIndex]?.id}`
+    );
+  };
 
   return (
     <>
