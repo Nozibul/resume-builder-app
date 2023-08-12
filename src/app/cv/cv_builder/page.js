@@ -7,7 +7,11 @@ const CvBuilder = () => {
 // console.log('params',searchParams)
 
   return (
-    <div>Cv Builder -- { searchParams }</div>
+    <div>Cv Builder -- { searchParams } 
+     <div>
+    
+     </div>
+    </div>
   )
 }
 
