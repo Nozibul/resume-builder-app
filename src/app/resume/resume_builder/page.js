@@ -6,7 +6,7 @@ const ResumeBuilder = () => {
  const searchParams = useSearchParams()
 
   return (
-    <div> REsume Builder -- { searchParams }</div>
+    <div> Resume Builder -- { searchParams }</div>
   )
 }
 

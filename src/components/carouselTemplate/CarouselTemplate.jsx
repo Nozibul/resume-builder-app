@@ -58,7 +58,7 @@ const CarouselTemplate = ({ title, data }) => {
     const matchNavigate = carouselData[activeSlideIndex]?.id.match(/[c]/gi);
 
     return router.push(
-      matchNavigate === "c"
+      matchNavigate && matchNavigate[0].toLowerCase() === "c"
         ? `/cv/cv_builder?id=${carouselData[activeSlideIndex]?.id}`
         : `/resume/resume_builder?id=${carouselData[activeSlideIndex]?.id}`
     );
