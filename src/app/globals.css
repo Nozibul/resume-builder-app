@@ -173,6 +173,23 @@
  }
 
 
+ /* select type section */
+.box-container {
+  max-width: 300px;
+  width: 100%;
+  height: 220px;
+  border: 2px solid #dad9df;
+  border-radius: 10px;
+  padding-bottom: 0px !important;
+  transition: all 0.4s linear;
+  cursor: pointer;
+
+  @media (max-width: 567px) {
+      margin: 15px;
+  }
+}
+
+
 
 }
 

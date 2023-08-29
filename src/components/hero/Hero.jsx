@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link"
 import { TextHeader, TextTitle } from "../ui/text/Text";
 import OthersBtn from "../ui/buttons/OthersBtn";
 import Resume from "../../../public/assets/images/hand-resume-copy-removebg-preview.png";
@@ -20,7 +21,9 @@ const Hero = () => {
               <TextHeader textHeader={textHeader} headerPosition={true}/>
               <TextTitle textTitle={textTitle} titlePosition={true} />
               <div className="mt-12">
-               <OthersBtn text="Get Started" />
+               <Link href='/select-type'>
+                <OthersBtn text="Get Started" />
+               </Link>
               </div>
             </div>
             <div className="grid justify-items-center">

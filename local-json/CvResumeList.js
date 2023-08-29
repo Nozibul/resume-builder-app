@@ -37,7 +37,7 @@ export const CV_DATA = [
 export const RESUME_DATA = [
     {
         id: "resume-1",
-        imageItem: "/assets/images/cv/canva_black_white_1.png",
+        imageItem: "/assets/images/cv/canva_black_white_3.png",
     },
     {
         id: "resume-2",
@@ -45,7 +45,7 @@ export const RESUME_DATA = [
     },
     {
         id: "resume-3",
-        imageItem: "/assets/images/cv/canva_black_white_3.png",
+        imageItem: "/assets/images/cv/canva_black_white_1.png",
     },
     {
         id: "resume-4",
