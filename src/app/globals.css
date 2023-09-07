@@ -66,8 +66,8 @@
   /* template section */
   .template-section {
     background-color: rgb(240, 245, 245);
-  
-    .button-styles {
+
+    .button-styles{
       border: none;
       outline: none;
       background-color: transparent;
@@ -132,8 +132,10 @@
     }
   }
 
+ 
 
- /* choose us section */
+
+/* choose us section */
 
  .box-1 {
   background-color: #eceeff;
