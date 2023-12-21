@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { CV_DATA, RESUME_DATA } from "../../../local-json/CvResumeList";
@@ -8,7 +7,7 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
   const [data, setData] = useState([]);
   const [moreItem, setMoreItem] = useState(4);
   const [loading, setLoading] = useState(true);
-  const [hovered, setHovered] = useState(null); // Added state for hover
+  const [hovered, setHovered] = useState(null); 
 
   useEffect(() => {
     if (activeComponent === 1) {

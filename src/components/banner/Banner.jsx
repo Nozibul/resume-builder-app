@@ -6,7 +6,7 @@ import { TextHeader, TextTitle } from "../ui/text/Text";
 import OthersBtn from "../ui/buttons/OthersBtn";
 import Resume from "../../../public/assets/images/hand-resume-copy-removebg-preview.png";
 
-const Hero = () => {
+const Banner = () => {
   let textHeader = `Whether you're looking to switch careers.`
   let textTitle = `Say Goodbye to Stressful\n Resume Writing with\n RESUME BUILDER`
   
@@ -36,4 +36,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Banner;

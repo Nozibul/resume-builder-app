@@ -1,6 +1,6 @@
 import AccordionItem from "@/components/accordionItem/AccordionItem"
 import ChooseUs from "@/components/chooseUs/ChooseUs"
-import Hero from "@/components/hero/Hero"
+import Banner from "@/components/banner/Banner"
 import Templates from "@/components/templates/Templates"
 import Works from "@/components/works/Works"
 
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <section className="w-full flex min-h-screen flex-col items-center">
-       <Hero />
+       <Banner />
        <Works />
        <Templates />
        <ChooseUs  />
