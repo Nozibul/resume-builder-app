@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const itemData = [
   {
@@ -40,7 +40,7 @@ const BannerSlide = () => {
   }, [currentSlide]);
 
   return (
-    <div className="w-96 carousel rounded-box overflow-hidden relative">
+   <div className="lg:w-96 md:w-72 sm:w-72 xs:w-60 lg:mt-0 md:mt-8 sm:mt-8 xs:mt-4 carousel rounded-box overflow-hidden relative mx-auto">
       {itemData?.map((item, i) => (
         <div
           key={i}

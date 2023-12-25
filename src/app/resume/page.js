@@ -1,4 +1,4 @@
-
+"use client"
 import TemplatesList from "@/components/lists/TemplatesList";
 import { TextTitle } from "@/components/ui/text/Text";
 import { useRouter } from "next/navigation";

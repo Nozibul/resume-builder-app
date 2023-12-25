@@ -1,9 +1,7 @@
-
 import Link from "next/link";
-import { TextHeader, TextTitle } from "../ui/text/Text";
-import OthersBtn from "../ui/buttons/OthersBtn";
-// import Resume from "../../../public/assets/images/hand-resume-copy-removebg-preview.png";
 import BannerSlide from "../bannerSlide/BannerSlide";
+import OthersBtn from "../ui/buttons/OthersBtn";
+import { TextHeader, TextTitle } from "../ui/text/Text";
 
 const Banner = () => {
   let textHeader = `Whether you're looking to switch careers.`;
@@ -11,23 +9,24 @@ const Banner = () => {
 
   return (
     <>
-      <section className="flex w-full items-center h-screen justify-center bg-fixed mb-12 bg-center bg-cover custom-img relative">
+      <section className="flex w-full items-center lg:h-screen md:h-screen sm:h-[650px] justify-center bg-fixed mb-12 bg-center bg-cover custom-img relative">
         {/* Overlay */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 z-[2]" />
-        <div className="p-5 text-white z-[2] ">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="ml-14 mt-16">
+        <div className="text-white z-[2] ">
+          <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+            <div className="md:ml-16 sm::ml-8  md:mt-16 sm:mt">
               <TextHeader textHeader={textHeader} headerPosition={true} />
-              <TextTitle textTitle={textTitle} titlePosition={true} />
-              <div className="mt-12">
+              <div className="md:mt-12 sm:mt-4">
+                <TextTitle textTitle={textTitle} titlePosition={true} />
+              </div>
+              <div className="md:mt-12 sm:mt-4 xs:mt-2">
                 <Link href="/select-type">
                   <OthersBtn text="Get Started" />
                 </Link>
               </div>
             </div>
-            <div className="grid justify-items-center border">
-              {/* <Image className="img-style mb-16" src={Resume} alt="resume-image" />          */}
-             <BannerSlide />
+            <div className="grid justify-items-center">
+              <BannerSlide />
             </div>
           </div>
         </div>

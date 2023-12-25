@@ -28,7 +28,7 @@ const Templates = () => {
       <div className="w-11/12 mx-auto mt-12">
         <div className="text-center py-8 pt-5">
           <TextTitle textTitle="CV/Resume Templates" />
-          <TextHeader textHeader={workHeader} text_size="text-xl" />
+          <TextHeader textHeader={workHeader} tSize="text-xl" />
         </div>
 
         <div className="w-11/12 mx-auto text-center py-3 ">
