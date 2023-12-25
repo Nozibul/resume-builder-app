@@ -15,11 +15,11 @@ export const TextHeader = ({textHeader, headerPosition, textSize}) => {
   )
 }
 
-export const TextTitle = ({textTitle, titlePosition, textSize}) => {
+export const TextTitle = ({textTitle, titlePosition, text_size}) => {
 
   // decide what to render
   let titlePositions = titlePosition ? "text-start" : 'text-center';
-  let titleSize = textSize ? textSize : 'text-4xl';
+  let titleSize = text_size ? text_size : 'text-4xl';
 
   return (
     <>

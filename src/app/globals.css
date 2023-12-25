@@ -21,6 +21,29 @@
             bg-white
   }
 
+
+    
+/* Footer Section */
+.footer-support{
+  @apply mt-3 flex flex-col pl-10 text-base font-semibold
+}
+
+.footerContact{
+  @apply flex items-center pl-40 text-white mt-10 font-semibold
+
+}
+.footerIcon{
+  @apply text-orange-500 text-base mt-7 mr-10
+
+} 
+
+  .head-card{
+    @apply text-red-500 text-4xl
+
+  }
+}
+
+
   /* hero section */
   .custom-img {
     background-image: url('../../public/assets/images/hero (1).png');
@@ -50,7 +73,8 @@
     width: 210px;
     border-radius: 100%;
     border: 6px solid #d9d8df;
-  }
+   }
+
   .mini-circle {
       height: 48px;
       width: 48px;
@@ -145,7 +169,7 @@
       padding: 10px;
       border-radius: 100%;
   }
-}
+ }
 .box-2 {
   background-color: #fff6ec;
   border-radius: 8px;
@@ -193,38 +217,9 @@
 
 
 
-}
 
 
 
-  /* Footer Section */
-  .footer-support{
-    @apply mt-3 flex flex-col pl-10 text-base font-semibold
-  }
 
-.footer-bg{
-  /* background-color: bg-gradient-to-t from-indigo-900 via-indigo-400 to-indigo-900; */
-  padding-top: 50px;
-  padding-bottom: 20px;
-  /* margin-top: -100px; */
-  z-index: -1;
-}
-.footerContact{
-  display: flex;
-  align-items:center;
-  padding-left: 40px;
-  color: white;
-  margin-top: 10px;
-  font-weight: 500;
-}
-.footerIcon{
-  color: #f3510c;
-  font-size: 16px;
-  margin-top: 7px;
-  margin-right: 10px;
-}
-.head-card{
-  color: red;
-  font-size: 45px;
-}
 
+  

@@ -1,6 +1,4 @@
 
-'use client'
-
 import CarouselTemplate from "@/components/carouselTemplate/CarouselTemplate";
 import { RESUME_DATA  } from "../../../../local-json/CvResumeList";
 

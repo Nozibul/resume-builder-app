@@ -1,5 +1,3 @@
-'use client'
-
 import { FaPhoneVolume, FaSms, FaLocationArrow } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,7 +30,7 @@ const FooterPage = () => {
        
 
     return (
-        <div className='footer-bg bg-gradient-to-tr from-slate-900 via-purple-900 to-slate-900'>  
+        <div className='pt-50 pb-20 relative z-[-1] bg-gradient-to-tr from-slate-900 via-purple-900 to-slate-900'>  
             <div className="grid grid-cols-4 w-10/12 gap-4 mx-auto">
               
                 <div className='w-64 text-white item-center'>

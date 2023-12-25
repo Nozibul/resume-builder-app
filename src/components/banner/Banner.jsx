@@ -1,6 +1,4 @@
-"use client";
 
-// import Image from "next/image";
 import Link from "next/link";
 import { TextHeader, TextTitle } from "../ui/text/Text";
 import OthersBtn from "../ui/buttons/OthersBtn";

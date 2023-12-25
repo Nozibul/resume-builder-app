@@ -1,9 +1,8 @@
 
-import FooterPage from '@/components/footer/FooterPage'
-import './globals.css'
 import { Inter } from 'next/font/google'
+import FooterPage from '@/components/footer/FooterPage'
 import Header from '@/components/header/Header'
-
+import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +11,7 @@ export const metadata = {
   description: 'Resume Builder web application.',
 }
 
-export default function RootLayout({ children ,}) {
+export default function RootLayout({ children }) {
  
   return (
     <html lang="en">
