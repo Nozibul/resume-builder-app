@@ -10,7 +10,7 @@ export const TextHeader = ({ textHeader, headerPosition, tSize }) => {
     <article className={`${headerPositions} mt-4 mb-4`}>
       <span
         style={{ whiteSpace: 'pre-line' }}
-        className={` ${headerSize.join(" ")} font-bold font-serif text-orange-400 `}
+        className={` ${headerSize.join(" ")} font-bold font-serif text-gray-400 `}
       >
         {textHeader}
       </span>
@@ -34,7 +34,6 @@ export const TextTitle = ({ textTitle, titlePosition, tSize }) => {
     </article>
   );
 };
-
 
 
 // Title component with consistent prop naming
