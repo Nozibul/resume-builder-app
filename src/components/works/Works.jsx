@@ -12,8 +12,8 @@ const Works = () => {
       <div className="w-full mt-8 mb-12">
       <TextTitle textTitle="How it's works" />
       <TextHeader textHeader="Create CV/Resume Following 3 Simple Steps" tSize="text-xl" />
-        <div className="grid grid-cols-3 gap-4  justify-items-center w-full mt-12">
-           <div className="grid justify-items-center border">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-4  justify-items-center w-full mt-12">
+           <div className="grid justify-items-center">
               <div className=" outline-violet-600 work-container flex justify-center items-center relative">
                 <div className="child-circle flex justify-center items-center">
                   <Image alt="document-image" src={DocumentImage} />
@@ -26,7 +26,7 @@ const Works = () => {
               </div>
            </div>
           
-            <div className="grid justify-items-center border">
+            <div className="grid justify-items-center">
               <div className=" outline-violet-600 work-container flex justify-center items-center relative">
                 <div className="child-circle flex justify-center items-center">
                 <Image alt="document-image" src={FrameImage} />
@@ -39,7 +39,7 @@ const Works = () => {
               </div>
             </div>
 
-            <div className="grid justify-items-center border">
+            <div className="grid justify-items-center">
               <div className=" outline-violet-600 work-container flex justify-center items-center relative">
                 <div className="child-circle flex justify-center items-center">
                 <Image alt="document-image" src={DownloadImage}  />

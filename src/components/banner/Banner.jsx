@@ -13,7 +13,7 @@ const Banner = () => {
         {/* Overlay */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 z-[2]" />
         <div className="text-white z-[2] ">
-          <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+          <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-4">
             <div className="md:ml-16 sm::ml-8  md:mt-16 sm:mt">
               <TextHeader textHeader={textHeader} headerPosition={true} />
               <div className="md:mt-12 sm:mt-4">
