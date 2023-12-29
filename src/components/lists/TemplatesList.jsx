@@ -36,7 +36,7 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
       <div>
         {!loading ? (
           data?.length ? (
-            <div className="grid grid-cols-4 gap-1">
+            <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-1 place-items-center">
               {data?.slice(0, moreItem)?.map((item) => {
                 return (
                   <div
@@ -45,12 +45,11 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
                     onMouseEnter={() => setHovered(item.id)} // Track hover
                     onMouseLeave={() => setHovered(null)} // Reset hover
                   >
-                    <div className="img-block relative">
+                    <div className="img-block relative w-64 h-80 ">
                       <Image
                         src={item.imageItem}
                         alt="cv-image"
-                        height={440}
-                        width={310}
+                        fill
                         priority={true}
                       />
                       {hovered === item.id && ( // Show button when hovered
