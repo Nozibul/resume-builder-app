@@ -11,30 +11,28 @@ const ChooseUs = () => {
      <div className='grid grid-cols-2 gap-4 w-11/12 p-6 mt-12'>
       <div className='mt-6'>
        <div className="box-1 mb-4">
-         <div className="flex items-center py-3">
+         <div className="flex items-center py-6">
             <div className="img-styles mx-4">
                 <Image src={HandImage} alt="hand-image" />
             </div>
             <div>
-             <p className="text-xl mb-2">Easy Online Resume Builder</p>
+             <p className="text-xl font-semibold mb-2">Easy Online Resume Builder</p>
               <p>
-                Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit
-                maecenas ultrices.
+              Build Your Resume/CV In Simple Few Steps
               </p>
             </div>
          </div> 
         </div>
 
         <div className="box-2 mb-4">
-            <div className="flex items-center py-3">
+            <div className="flex items-center py-6">
                 <div className="img-styles mx-4 ">
                     <Image src={EditImage} alt="hand-image" />
                 </div>
                 <div>
-                    <p className="text-xl mb-2">Create Job Winning Resumes</p>
+                    <p className="text-xl font-semibold mb-2">Auto-Save Progress</p>
                     <p>
-                        Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit
-                        maecenas ultrices.
+                    Start From Where You Previously Left
                     </p>
                 </div>
             </div> 
@@ -46,10 +44,9 @@ const ChooseUs = () => {
                     <Image src={ExportImage} alt="hand-image" />
                 </div>
                 <div>
-                    <p className="text-xl mb-2">Export to Anything</p>
+                    <p className="text-xl font-semibold mb-2">Export to Anything</p>
                     <p>
-                        Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit
-                        maecenas ultrices.
+                    No Limitation In Exporting Your Desired Premium Resume/CV Templates For Free!
                     </p>
                 </div>
             </div> 
@@ -61,17 +58,12 @@ const ChooseUs = () => {
         <TextTitle textTitle="Why choose us" titlePosition={true} />
         <div className='mt-8'>
             <p className='text-neutral-500'>
-              We’re certainly not the only content marketing company out there,
-              but we strive to be the best. One of our core principles is to 
-              only sell a quality of service that is proven and that we 
-              believe in, even if it means missing out on a few customers.
+            Choose our Resume Builders for a seamless resume-building experience. Enjoy the freedom to export unlimited templates for free, giving you endless options to showcase your skills. With our autosave feature, your progress is securely saved, allowing you to pick up where you left off. Our user-friendly interface makes creating professional resumes a breeze, even without design skills.
             </p>
         </div>
-        <div className='my-10'>
-            <p className='text-neutral-500'>
-              We’re the only known company that offers a fully-managed blog 
-              content service with an uncompromising level of quality and 
-              decades of experience, without the expensive agency price tag.
+        <div className='my-8'>
+            <p className='text-neutral-500 '>
+            Don't miss out on your dream job – join us today and effortlessly create standout resumes.
             </p>
         </div>
           <OthersBtn text="create my resume/cv" />
