@@ -1,4 +1,4 @@
-import AccordionItem from "@/components/accordionItem/AccordionItem"
+import AccordionItem from "@/app/home/accordingSection/AccordionItem"
 import Banner from "@/app/home/bannerSection/Banner"
 import Templates from "@/components/templates/Templates"
 import Works from "@/app/home/worksSection/Works"

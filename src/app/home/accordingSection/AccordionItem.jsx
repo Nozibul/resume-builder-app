@@ -1,12 +1,12 @@
-import { accordion_data } from '../../../local-json/accordion'
-import { TextTitle } from '../ui/text/Text'
+import { TextTitle } from '@/components/ui/text/Text'
+import { accordion_data } from '../../../../local-json/accordion'
 
 const AccordionItem = () => {
     const titleText = `Have Questions For A Great Resume?`
   return (
     <>
-     <div className='bg-base-200 w-full py-12 mt-14 z-'>
-        <div>
+     <div className='bg-base-200 w-full py-14 mt-18 z-'>
+        <div className='my-4'>
           <TextTitle textTitle={titleText}  />
           <p className='text-slate-600 text-center my-6'>Expert Answers to All Your Resume Inquiries.</p>
         </div>

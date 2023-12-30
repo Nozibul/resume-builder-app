@@ -21,14 +21,13 @@ const Templates = () => {
     );
   };
 
-  let workHeader = `Aliquam erat volutpat. Integer malesuada \n turpis fringilla suscipit. `;
 
   return (
     <section className="w-full template-section">
       <div className="w-11/12 mx-auto mt-12">
         <div className="text-center py-8 pt-5">
           <TextTitle textTitle="CV/Resume Templates" />
-          <TextHeader textHeader={workHeader} tSize="text-xl" />
+          <TextHeader textHeader="Select Your Desired Premium Templates For Free" tSize="text-xl" />
         </div>
 
         <div className="w-11/12 mx-auto text-center py-3 ">
