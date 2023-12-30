@@ -40,7 +40,7 @@ const BannerSlide = () => {
   }, [currentSlide]);
 
   return (
-   <div className="lg:w-96 md:w-72 sm:w-72 xs:w-60 lg:mt-0 md:mt-8 sm:mt-8 xs:mt-4 carousel rounded-box overflow-hidden relative mx-auto">
+    <div className="lg:w-96 md:w-72 sm:w-72 xs:w-60 lg:mt-0 md:mt-8 sm:mt-8 xs:mt-4 carousel rounded-box overflow-hidden relative mx-auto">
       {itemData?.map((item, i) => (
         <div
           key={i}

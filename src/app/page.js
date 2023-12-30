@@ -1,8 +1,8 @@
 import AccordionItem from "@/components/accordionItem/AccordionItem"
-import ChooseUs from "@/components/chooseUs/ChooseUs"
-import Banner from "@/components/banner/Banner"
+import Banner from "@/app/home/bannerSection/Banner"
 import Templates from "@/components/templates/Templates"
 import Works from "@/components/works/Works"
+import HomePage from "./home/page"
 
 
 export const metadata = {
@@ -17,7 +17,7 @@ export default function Home() {
        <Banner />
        <Works />
        <Templates />
-       <ChooseUs  />
+       <HomePage />
        <AccordionItem />
       </section>
    </> 

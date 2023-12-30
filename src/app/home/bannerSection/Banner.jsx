@@ -1,7 +1,7 @@
+import OthersBtn from "@/components/ui/buttons/OthersBtn";
+import { TextHeader, TextTitle } from "@/components/ui/text/Text";
 import Link from "next/link";
-import BannerSlide from "../bannerSlide/BannerSlide";
-import OthersBtn from "../ui/buttons/OthersBtn";
-import { TextHeader, TextTitle } from "../ui/text/Text";
+import BannerSlide from "./BannerSlide";
 
 const Banner = () => {
   let textHeader = `Whether you're looking to switch careers.`;
@@ -10,7 +10,6 @@ const Banner = () => {
   return (
     <>
       <section className="flex w-full items-center lg:h-screen md:h-screen sm:h-[650px] justify-center bg-fixed mb-12 bg-center bg-cover custom-img relative">
-        {/* Overlay */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 z-[2]" />
         <div className="text-white z-[2] ">
           <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-4">
