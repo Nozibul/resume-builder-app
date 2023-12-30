@@ -1,7 +1,7 @@
 import AccordionItem from "@/components/accordionItem/AccordionItem"
 import Banner from "@/app/home/bannerSection/Banner"
 import Templates from "@/components/templates/Templates"
-import Works from "@/components/works/Works"
+import Works from "@/app/home/worksSection/Works"
 import HomePage from "./home/page"
 
 

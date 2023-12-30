@@ -14,7 +14,7 @@ export const features = [
       description: "Start From Where You Previously Left",
     },
     {
-      id: 1,
+      id: 3,
       color: "box-3",
       img: "/assets/images/hand.png",
       title: "Export to Anything",
