@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { TextTitle, TextHeader } from "../ui/text/Text";
-import TemplatesList from "../lists/TemplatesList";
+import { TextTitle, TextHeader } from "../../../components/ui/text/Text";
+import TemplatesList from "../../../components/lists/TemplatesList";
 import { useRouter } from "next/navigation";
 
 const Templates = () => {
@@ -23,8 +23,8 @@ const Templates = () => {
 
 
   return (
-    <section className="w-full template-section">
-      <div className="w-11/12 mx-auto mt-12">
+    <section className="w-full template-section py-2">
+      <div className="w-11/12 mx-auto mt-10">
         <div className="text-center py-8 pt-5">
           <TextTitle textTitle="CV/Resume Templates" />
           <TextHeader textHeader="Select Your Desired Premium Templates For Free" tSize="text-xl" />

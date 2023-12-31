@@ -6,34 +6,21 @@
 @layer components {
 
   /* icon */
-  .icon-hover{
-    @apply transition duration-300 delay-200 ease-in-out
-  }
- 
   .social-icon{
     @apply text-orange-600 
             text-[22px]
             rounded-full 
             p-2
-            hover:-translate-y-2
-            hover:bg-orange-700
-            hover:text-white
             bg-white
   }
 
 
     
-/* Footer Section */
-.footer-support{
-  @apply mt-3 flex flex-col pl-10 text-base font-semibold
-}
 
-.footerContact{
-  @apply flex items-center pl-40 text-white mt-10 font-semibold
 
-}
+
 .footerIcon{
-  @apply text-orange-500 text-base mt-7 mr-10
+  @apply text-orange-600 text-base mr-2
 
 } 
 

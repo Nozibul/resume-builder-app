@@ -1,9 +1,4 @@
-import AccordionItem from "@/app/home/accordingSection/AccordionItem"
-import Banner from "@/app/home/bannerSection/Banner"
-import Templates from "@/components/templates/Templates"
-import Works from "@/app/home/worksSection/Works"
 import HomePage from "./home/page"
-
 
 export const metadata = {
   title: 'Home - Resume Builder',
@@ -14,11 +9,7 @@ export default function Home() {
   return (
     <>
       <section className="w-full flex min-h-screen flex-col items-center">
-       <Banner />
-       <Works />
-       <Templates />
        <HomePage />
-       <AccordionItem />
       </section>
    </> 
   )
