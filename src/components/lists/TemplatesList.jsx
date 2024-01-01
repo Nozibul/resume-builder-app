@@ -2,12 +2,25 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { CV_DATA, RESUME_DATA } from "../../../local-json/CvResumeList";
+import { Motion } from "../motion/Motion";
 
 const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
   const [data, setData] = useState([]);
   const [moreItem, setMoreItem] = useState(4);
   const [loading, setLoading] = useState(true);
   const [hovered, setHovered] = useState(null); 
+
+
+  // Define the motion props as a constant
+  const motionProps = {
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true },
+    variants: {
+      visible: { opacity: 1, scale: 1 },
+      hidden: { opacity: 0, scale: 0.7 },
+    },
+  };
 
   useEffect(() => {
     if (activeComponent === 1) {
@@ -37,9 +50,12 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
         {!loading ? (
           data?.length ? (
             <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-1 place-items-center">
-              {data?.slice(0, moreItem)?.map((item) => {
+              {data?.slice(0, moreItem)?.map((item, i) => {
+                const delayTime = "0." + i;
                 return (
-                  <div
+                  <Motion
+                    {...motionProps}
+                    transition={{ duration: 0.5, delay: delayTime }}
                     className="text-center py-2 relative"
                     key={item.id}
                     onMouseEnter={() => setHovered(item.id)} // Track hover
@@ -64,7 +80,7 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
                         </button>
                       )}
                     </div>
-                  </div>
+                  </Motion>
                 );
               })}
             </div>

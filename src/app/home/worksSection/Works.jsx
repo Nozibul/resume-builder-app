@@ -5,17 +5,18 @@ import { Motion } from "@/components/motion/Motion.jsx";
 
 const Works = () => {
 
-// Define the motion props as a constant
-const motionProps = {
-  initial: "hidden",
-  whileInView: "visible",
-  viewport: { once: true },
-  transition:{ duration: 0.5, delay: 0.3 },
-  variants: {
-    visible: { opacity: 1, scale: 1 },
-    hidden: { opacity: 0, scale: 0.7 },
-  },
-}
+  // Define the motion props as a constant
+  const motionProps = {
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true },
+    transition:{ duration: 0.5, delay: 0.2 },
+    variants: {
+      visible: { opacity: 1, scale: 1 },
+      hidden: { opacity: 0, scale: 0.7 },
+    },
+  };
+
   return (
     <>
       <div className="w-full mt-8 mb-12">
@@ -31,7 +32,7 @@ const motionProps = {
                 <Motion className="grid justify-items-center" key={id}
                 {...motionProps}
                 >
-                  <div className=" outline-violet-600 work-container flex justify-center items-center relative">
+                  <div className="outline-violet-600 work-container flex justify-center items-center relative">
                     <div className="child-circle flex justify-center items-center">
                       <Image
                         alt="document-image"

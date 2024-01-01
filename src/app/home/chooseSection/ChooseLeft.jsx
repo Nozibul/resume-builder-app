@@ -1,7 +1,19 @@
 import Image from "next/image";
 import { features } from "../../../../local-json/chooseInfo";
+import { Motion } from "@/components/motion/Motion";
 
 const ChooseLeft = () => {
+  // Define the motion props as a constant
+  const motionProps = {
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true },
+    transition:{ duration: 0.7, delay: 0.4 },
+    variants: {
+      visible: { opacity: 1, x: 0 },
+      hidden: { opacity: 0, x: -250 },
+    },
+  }
   return (
     <>
       <div className="mt-6">
@@ -9,7 +21,8 @@ const ChooseLeft = () => {
           features.map((feature) => {
             const { id, title, color, img, description } = feature;
             return (
-              <div className={`${color} mb-4`} key={id}>
+              <Motion {...motionProps}
+               className={`${color} mb-4`} key={id}>
                 <div className="flex items-center py-6">
                   <div className="img-styles mx-4">
                     <Image src={img} alt="hand-image" width={35} height={35}/>
@@ -19,7 +32,7 @@ const ChooseLeft = () => {
                     <p>{description}</p>
                   </div>
                 </div>
-              </div>
+              </Motion>
             );
           })
         ) : (

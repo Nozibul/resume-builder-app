@@ -1,9 +1,20 @@
 import { TextTitle } from "@/components/ui/text/Text";
-import OthersBtn from '@/components/ui/buttons/OthersBtn';
+import OthersBtn from "@/components/ui/buttons/OthersBtn";
+import { Motion } from "@/components/motion/Motion";
 
 const ChooseRight = () => {
   return (
-    <div className="p-6">
+    <Motion
+      className="p-6"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, delay: 0.4 }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 200 },
+      }}
+    >
       <TextTitle textTitle="Why choose us" titlePosition={true} />
       <div className="mt-12">
         <p className="text-neutral-500">
@@ -22,7 +33,7 @@ const ChooseRight = () => {
         </p>
       </div>
       <OthersBtn text="create my resume/cv" />
-    </div>
+    </Motion>
   );
 };
 
