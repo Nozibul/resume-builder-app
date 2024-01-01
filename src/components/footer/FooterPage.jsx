@@ -95,9 +95,9 @@ const FooterPage = () => {
       <div className="w-10/12 mx-auto mt-10">
         <hr className="text-white" />
         <div className="w-[450px] mx-auto ">
-          <small className="text-white">
+          <small className="text-white ml-8">
             {" "}
-            Copyright&copy; 2023 Resume Builder | Developed By Nozibul Islam
+            Copyright&copy; 2024 Resume Builder | Developed By Nozibul Islam
           </small>
         </div>
       </div>

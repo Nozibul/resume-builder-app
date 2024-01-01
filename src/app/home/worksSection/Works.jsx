@@ -1,8 +1,21 @@
 import { TextHeader, TextTitle } from "@/components/ui/text/Text";
 import Image from "next/image";
 import { works } from "../../../../local-json/worksInfo.js";
+import { Motion } from "@/components/motion/Motion.jsx";
 
 const Works = () => {
+
+// Define the motion props as a constant
+const motionProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true },
+  transition:{ duration: 0.5, delay: 0.3 },
+  variants: {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.7 },
+  },
+}
   return (
     <>
       <div className="w-full mt-8 mb-12">
@@ -15,7 +28,9 @@ const Works = () => {
             works.map((work) => {
               const { id, title, header, img } = work;
               return (
-                <div className="grid justify-items-center" key={id}>
+                <Motion className="grid justify-items-center" key={id}
+                {...motionProps}
+                >
                   <div className=" outline-violet-600 work-container flex justify-center items-center relative">
                     <div className="child-circle flex justify-center items-center">
                       <Image
@@ -33,7 +48,7 @@ const Works = () => {
                     <TextTitle textTitle={title} />
                     <TextHeader textHeader={header} tSize="text-lg" />
                   </div>
-                </div>
+                </Motion>
               );
             })
           ) : (

@@ -2,8 +2,21 @@ import OthersBtn from "@/components/ui/buttons/OthersBtn";
 import { TextHeader, TextTitle } from "@/components/ui/text/Text";
 import Link from "next/link";
 import BannerSlide from "./BannerSlide";
+import { Motion } from "@/components/motion/Motion";
 
 const Banner = () => {
+
+// Define the motion props as a constant
+const motionProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true },
+  variants: {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -250 },
+  },
+}
+
   let textHeader = `Whether you're looking to switch careers.`;
   let textTitle = `Say Goodbye to Stressful\n Resume Writing with\n RESUME BUILDER`;
 
@@ -14,19 +27,37 @@ const Banner = () => {
         <div className="text-white z-[2] ">
           <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-4">
             <div className="md:ml-16 sm::ml-8  md:mt-16 sm:mt">
-              <TextHeader textHeader={textHeader} headerPosition={true} />
-              <div className="md:mt-12 sm:mt-4">
+              <Motion {...motionProps} transition={{ duration: 0.5, delay: 0.6 }}>
+               <TextHeader textHeader={textHeader} headerPosition={true} />
+              </Motion>
+              <Motion className="md:mt-12 sm:mt-4"
+                {...motionProps}
+                transition={{ duration: 0.7, delay: 0.8 }}
+              >
                 <TextTitle textTitle={textTitle} titlePosition={true} />
-              </div>
-              <div className="md:mt-12 sm:mt-4 xs:mt-2">
+              </Motion>
+              <Motion className="md:mt-12 sm:mt-4 xs:mt-2"
+                  {...motionProps}
+                  transition={{ duration: 0.9, delay: 0.9 }}
+              >
                 <Link href="/select-type">
                   <OthersBtn text="Get Started" />
                 </Link>
-              </div>
+              </Motion>
             </div>
-            <div className="grid justify-items-center">
+            <Motion
+              className="grid justify-items-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              variants={{
+                hidden: { opacity: 0, scale: 0.7 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+            >
               <BannerSlide />
-            </div>
+            </Motion>
           </div>
         </div>
       </section>
