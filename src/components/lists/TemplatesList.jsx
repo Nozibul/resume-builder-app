@@ -3,13 +3,14 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { CV_DATA, RESUME_DATA } from "../../../local-json/CvResumeList";
 import { Motion } from "../motion/Motion";
+import LoadingTemplate from "./LoadingTemplate";
+import Skeleton from "@/components/skeleton/Skeleton";
 
 const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
   const [data, setData] = useState([]);
   const [moreItem, setMoreItem] = useState(4);
   const [loading, setLoading] = useState(true);
-  const [hovered, setHovered] = useState(null); 
-
+  const [hovered, setHovered] = useState(null);
 
   // Define the motion props as a constant
   const motionProps = {
@@ -72,13 +73,13 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
                         <button
                           onClick={() => handleButtonClick(item)}
                           className="absolute inset-0 flex items-center justify-center text-white font-bold 
-                           opacity-0 hover:opacity-100 transition delay-150 duration-500 ease-in-out hover:-translate-y-1 hover:scale-[1.04] duration-400"  
-                            >
+                           opacity-0 hover:opacity-100 transition delay-150 duration-500 ease-in-out hover:-translate-y-1 hover:scale-[1.04] duration-400"
+                        >
                           <p className="rounded-sm py-1 px-2 bg-purple-500">
                             Use Template
                           </p>
                         </button>
-                      ) : null }
+                      ) : null}
                     </div>
                   </Motion>
                 );
@@ -88,11 +89,9 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
             <h4 className="text-center">Result is not found!</h4>
           )
         ) : (
-          <div className="flex justify-center py-5">
-            <span className="visually-hidden">Loading...</span>
-          </div>
+          <LoadingTemplate />
         )}
-        {!loading && (
+        {!loading ? (
           <div className="text-center py-5">
             <button
               onClick={moreItem !== data?.length ? loadMoreItem : null}
@@ -103,6 +102,10 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
               Show more templates
             </button>
           </div>
+        ) : (
+          <p className="text-center mt-4">
+            <Skeleton duration={1.5} width={230} height={40} />
+          </p>
         )}
       </div>
     </>
