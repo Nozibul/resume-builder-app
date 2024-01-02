@@ -61,24 +61,24 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
                     onMouseEnter={() => setHovered(item.id)} // Track hover
                     onMouseLeave={() => setHovered(null)} // Reset hover
                   >
-                    <div className="img-block relative w-64 h-80 ">
+                    <div className="img-block relative w-64 h-80 transition-opacity hover:scale-[1.05]">
                       <Image
                         src={item.imageItem}
                         alt="cv-image"
                         fill
                         priority={true}
                       />
-                      {hovered === item.id && ( // Show button when hovered
+                      {hovered ? ( // Show button when hovered
                         <button
                           onClick={() => handleButtonClick(item)}
                           className="absolute inset-0 flex items-center justify-center text-white font-bold 
-                           py-1 px-2 rounded-sm transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 "  
+                           opacity-0 hover:opacity-100 transition delay-150 duration-500 ease-in-out hover:-translate-y-1 hover:scale-[1.04] duration-400"  
                             >
-                          <p className="rounded-lg p-2 bg-purple-600">
+                          <p className="rounded-sm py-1 px-2 bg-purple-500">
                             Use Template
                           </p>
                         </button>
-                      )}
+                      ) : null }
                     </div>
                   </Motion>
                 );
