@@ -1,26 +1,14 @@
 "use client";
 import { useState } from "react";
-import { TextTitle, TextHeader } from "../../../components/ui/text/Text";
-import TemplatesList from "../../../components/lists/TemplatesList";
-import { useRouter } from "next/navigation";
+import { TextHeader, TextTitle } from "../../../components/ui/text/Text";
+import SelectTemplate from "@/components/lists/SelectTemplate";
 
 const Templates = () => {
-  const router = useRouter();
   const [activeButton, setActiveButton] = useState(1);
 
   const activeButtonMethod = (value) => {
     setActiveButton(value);
   };
-
-  const MethodToSelectCvResume = ({ id, type }) => {
-    // Implement the method to select a CV or Resume
-    return router.push(
-      type === "resume"
-        ? `/resume/resume_template_preview?_id=${id}`
-        : `/cv/cv_template_preview?_id=${id}`
-    );
-  };
-
 
   return (
     <section className="w-full template-section py-2">
@@ -29,7 +17,6 @@ const Templates = () => {
           <TextTitle textTitle="CV/Resume Templates" />
           <TextHeader textHeader="Select Your Desired Premium Templates For Free" tSize="text-xl" />
         </div>
-
         <div className="w-11/12 mx-auto text-center py-3 ">
           <button
             onClick={() => {
@@ -54,10 +41,7 @@ const Templates = () => {
         </div>
 
         <div className="py-4 render-cv-list-widget">
-          <TemplatesList
-            activeComponent={activeButton}
-            callBack={MethodToSelectCvResume}
-          />
+          <SelectTemplate active={activeButton} />
         </div>
       </div>
     </section>

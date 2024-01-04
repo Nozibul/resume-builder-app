@@ -1,5 +1,3 @@
-import Image from "next/image";
-import React from "react";
 import Skeleton from "@/components/skeleton/Skeleton";
 
 const LoadingTemplate = () => {
@@ -15,19 +13,6 @@ const LoadingTemplate = () => {
           );
         })}
       </div>
-
-      {/* {!loading && (
-          <div className="text-center py-5">
-            <button
-              onClick={moreItem !== data?.length ? loadMoreItem : null}
-              className={`show-more-btn ${
-                moreItem === data?.length ? "disable-show-more-btn" : ""
-              }`}
-            >
-              Show more templates
-            </button>
-          </div>
-        )} */}
     </>
   );
 };

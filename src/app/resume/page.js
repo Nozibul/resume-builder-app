@@ -1,16 +1,7 @@
-"use client"
-import TemplatesList from "@/components/lists/TemplatesList";
+import SelectTemplate from "@/components/lists/SelectTemplate";
 import { TextTitle } from "@/components/ui/text/Text";
-import { useRouter } from "next/navigation";
 
-const Resume = () => {
-  // define router
-  const router = useRouter();
-
-  const selectResumeTemplate = ({ id }) => {
-     return router.push(`/resume/resume_template_preview?_id=${id}`)
-  };
-
+const ResumePage = () => {
   return (
     <section className="w-full template-section">
       <div className="w-11/12 mx-auto py-12">
@@ -20,11 +11,11 @@ const Resume = () => {
           prefer
         </p>
         <div className="py-4 render-cv-list-widget">
-          <TemplatesList activeComponent={2} callBack={selectResumeTemplate} />
+          <SelectTemplate active={2} />
         </div>
       </div>
     </section>
   );
 };
 
-export default Resume;
+export default ResumePage;
