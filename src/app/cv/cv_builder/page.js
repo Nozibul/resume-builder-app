@@ -1,4 +1,4 @@
-
+"use client"
 import PersonalInfo from "@/components/modules/cv_resune_builder/personalInfo/PersonalInfo"
 import { useSearchParams } from "next/navigation"
 

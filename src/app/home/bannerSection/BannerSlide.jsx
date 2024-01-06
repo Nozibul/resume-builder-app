@@ -34,7 +34,7 @@ const BannerSlide = () => {
     // Autoplay interval in milliseconds
     const interval = setInterval(() => {
       nextSlide();
-    }, 4000); // Change 4000 to the desired autoplay interval
+    }, 3000); // Change 4000 to the desired autoplay interval
 
     return () => clearInterval(interval);
   }, [currentSlide]);
@@ -46,7 +46,7 @@ const BannerSlide = () => {
           key={i}
           style={{
             display: i === currentSlide ? "block" : "none",
-            transition: "opacity 0.5s ease-in-out",
+            transition:"opacity 0.4s ease-in-out",
             opacity: i === currentSlide ? 1 : 0,
           }}
           className="carousel-item w-full"

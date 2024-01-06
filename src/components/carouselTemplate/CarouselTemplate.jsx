@@ -1,9 +1,9 @@
 "use client";
 
 import { TextTitle } from "@/components/ui/text/Text";
-import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const CarouselTemplate = ({ title, data }) => {
   const [carouselData, setCarouselData] = useState([]);

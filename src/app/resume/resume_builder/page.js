@@ -1,8 +1,9 @@
 'use client';
 import { useSearchParams } from "next/navigation"
 
-const ResumeBuilder = () => {
- const searchParams = useSearchParams()
+const ResumeBuilder = ({params}) => {
+ const searchParams = useSearchParams();
+ console.log(params);
 
   return (
     <div> Resume Builder -- { searchParams }</div>
