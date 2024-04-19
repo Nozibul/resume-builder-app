@@ -37,9 +37,9 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-sky-900 left-0 sticky top-0 w-full z-50 ">
+      <div className="bg-sky-800 left-0 sticky top-0 w-full z-50 ">
         <div className="w-full m-auto flex justify-between p-2 text-white">
-          <Link className="ml-14 w-20" href="/">
+          <Link className="ml-14 w-[86px] pb-1" href="/">
             <Image src={logo} alt="logo" />
           </Link>
 

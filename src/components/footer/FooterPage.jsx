@@ -27,7 +27,7 @@ const FooterPage = () => {
       <div className="grid grid-cols-4 w-10/12 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-4 mx-auto">
         <div className="text-white item-center">
           <div className="mt-4">
-            <div className="w-6/12 lg:-ml-1 md:-ml-4">
+            <div className="w-6/12 md:-ml-4">
               <TextHeader textHeader="Follow Us" />
             </div>
             <div className="pt-2">

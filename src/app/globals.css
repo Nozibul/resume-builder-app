@@ -15,8 +15,6 @@
   }
 
 
-    
-
 
 
 .footerIcon{
@@ -111,7 +109,8 @@
           }
       }
   }
-    /* cv and resume list */
+
+  /* cv and resume list */
     .render-cv-list-widget {
       .img-block {
           cursor: pointer;

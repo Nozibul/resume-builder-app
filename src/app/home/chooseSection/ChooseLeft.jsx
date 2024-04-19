@@ -20,6 +20,7 @@ const ChooseLeft = () => {
         {features?.length > 0 ? (
           features.map((feature) => {
             const { id, title, color, img, description } = feature;
+            
             return (
               <Motion {...motionProps}
                className={`${color} mb-4`} key={id}>

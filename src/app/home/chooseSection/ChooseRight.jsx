@@ -32,7 +32,7 @@ const ChooseRight = () => {
           create standout resumes.
         </p>
       </div>
-      <OthersBtn text="create my resume/cv" />
+      <OthersBtn text="create my cv/resume" />
     </Motion>
   );
 };

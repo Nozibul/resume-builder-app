@@ -19,9 +19,7 @@ const Templates = () => {
         </div>
         <div className="w-11/12 mx-auto text-center py-3 ">
           <button
-            onClick={() => {
-              activeButtonMethod(1);
-            }}
+            onClick={() => { activeButtonMethod(1) }}
             className={` button-styles ${
               activeButton == 1 ? "active-btn" : null
             } `}
@@ -29,9 +27,7 @@ const Templates = () => {
             CV
           </button>
           <button
-            onClick={() => {
-              activeButtonMethod(2);
-            }}
+            onClick={() => { activeButtonMethod(2) }}
             className={`button-styles ${
               activeButton == 2 ? "active-btn" : null
             } `}

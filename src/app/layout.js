@@ -1,4 +1,3 @@
-
 import { Inter } from 'next/font/google'
 import FooterPage from '@/components/footer/FooterPage'
 import Header from '@/components/header/Header'
@@ -8,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Resume Builder',
-  description: 'Resume Builder web application.',
+  description: 'Cv/Resume Builder web application.',
 }
 
 export default function RootLayout({ children }) {

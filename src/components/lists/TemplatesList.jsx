@@ -7,6 +7,7 @@ import LoadingTemplate from "./LoadingTemplate";
 import Skeleton from "@/components/skeleton/Skeleton";
 
 const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
+ 
   const [data, setData] = useState([]);
   const [moreItem, setMoreItem] = useState(4);
   const [loading, setLoading] = useState(true);
@@ -75,7 +76,7 @@ const TemplatesList = ({ activeComponent = 1, callBack = null }) => {
                           className="absolute inset-0 flex items-center justify-center text-white font-bold 
                            opacity-0 hover:opacity-100 transition delay-150 duration-500 ease-in-out hover:-translate-y-1 hover:scale-[1.04] duration-400"
                         >
-                          <p className="rounded-sm py-1 px-2 bg-purple-500">
+                          <p className="rounded-sm py-1 px-2 bg-purple-400">
                             Use Template
                           </p>
                         </button>

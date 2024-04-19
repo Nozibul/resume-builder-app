@@ -4,7 +4,7 @@ import ChooseSection from './chooseSection/ChooseSection'
 import Templates from './templates/Templates'
 import Works from './worksSection/Works'
 
-const HomePage = () => {
+const  HomePage = () => {
   return (
     <div>
         <Banner />

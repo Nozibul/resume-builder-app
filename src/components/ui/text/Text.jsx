@@ -21,13 +21,13 @@ export const TextHeader = ({ textHeader, headerPosition, tSize }) => {
 
 export const TextTitle = ({ textTitle, titlePosition, tSize }) => {
   const titlePositions = titlePosition ? "text-start" : "text-center";
-  const titleSize = tSize ? tSize : ["lg:text-4xl", "md:text-3xl", "sm:text-xl" , "xs:text-base"];
+  const titleSize = tSize ? tSize : ["lg:text-3xl", "md:text-3xl", "sm:text-xl" , "xs:text-base"];
 
   return (
     <article className={`${titlePositions}`}>
       <span
         style={{ whiteSpace: "pre-line" }}
-        className={` ${titleSize.join(" ")} font-bold font-serif text-[rgb(17, 17, 78)] `}
+        className={` ${titleSize.join(" ")} tracking-[1px] font-bold font-serif text-[rgb(17, 17, 78)] `}
       >
         {textTitle}
       </span>

@@ -26,8 +26,9 @@ const Works = () => {
         />
         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-4  justify-items-center w-full mt-12">
           {works?.length > 0 ? (
-            works.map((work) => {
+            works?.map((work) => {
               const { id, title, header, img } = work;
+
               return (
                 <Motion className="grid justify-items-center" key={id}
                 {...motionProps}
@@ -45,7 +46,7 @@ const Works = () => {
                       0{id}
                     </div>
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-6">
                     <TextTitle textTitle={title} />
                     <TextHeader textHeader={header} tSize="text-lg" />
                   </div>
