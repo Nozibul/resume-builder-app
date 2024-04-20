@@ -51,8 +51,8 @@ const CvBuilder = () => {
                   const isSkillsEmpty = item.id == 5;
                   // This field is optional
                   const isCertificationsEmpty = item.id == 6;
-                   // This field is optional
-                   const isReferencesEmpty = item.id == 7
+                  // This field is optional
+                  const isReferencesEmpty = item.id == 7
 
               })
             }

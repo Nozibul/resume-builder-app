@@ -15,7 +15,7 @@ const CarouselTemplate = ({ title, data }) => {
 
   useEffect(() => {
     if (selectedItemId) {
-      const selectedItem = data.find((item) => item.id === selectedItemId);
+      const selectedItem = data?.find((item) => item.id === selectedItemId);
       if (selectedItem) {
         setCarouselData([selectedItem, ...data]);
         setActiveSlideIndex(0);
@@ -69,7 +69,7 @@ const CarouselTemplate = ({ title, data }) => {
       <div className="w-full">
         <div className="w-11/12 mx-auto py-12">
           <TextTitle textTitle={title} />
-          <p className="text-slate-600 text-center my-6">
+          <p className="text-slate-500 text-center my-6">
             Browse through our collection of templates and select the one you
             prefer.
           </p>
