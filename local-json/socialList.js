@@ -1,0 +1,15 @@
+export const socialList = [
+    { id: 1, value: "facebook", label: "Facebook" },
+    { id: 2, value: "instagram", label: "Instagram" },
+    { id: 3, value: "linkedin", label: "Linkedin" },
+    { id: 4, value: "youtube", label: "YouTube" },
+    { id: 5, value: "twitter", label: "Twitter" },
+    { id: 6, value: "tiktok", label: "TikTok" },
+    { id: 7, value: "pinterest", label: "Pinterest" },
+    { id: 8, value: "website", label: "Website" },
+    { id: 9, value: "github", label: "Github" },
+    { id: 10, value: "dribble", label: "Dribble" },
+    { id: 11, value: "toptal", label: "Toptal" },
+    { id: 12, value: "upwork", label: "upwork" },
+    { id: 13, value: "others", label: "Others" },
+];
