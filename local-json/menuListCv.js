@@ -23,8 +23,5 @@ export const CV_RESUME_MENU_LIST = [
         id: 6,
         name: "Certifications",
     },
-    {
-        id: 7,
-        name: "References",
-    },
+  
 ];

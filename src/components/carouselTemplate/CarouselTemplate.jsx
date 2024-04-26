@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const CarouselTemplate = ({ title, data }) => {
+const CarouselTemplate = ({ data }) => {
+  
   const [carouselData, setCarouselData] = useState([]);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [scrolling, setScrolling] = useState(false);
@@ -68,7 +69,7 @@ const CarouselTemplate = ({ title, data }) => {
     <>
       <div className="w-full">
         <div className="w-11/12 mx-auto py-12">
-          <TextTitle textTitle={title} />
+          <TextTitle textTitle="CV Template Preview" />
           <p className="text-slate-500 text-center my-6">
             Browse through our collection of templates and select the one you
             prefer.

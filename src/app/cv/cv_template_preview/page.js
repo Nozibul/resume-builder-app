@@ -4,7 +4,7 @@ import { CV_DATA } from "../../../../local-json/CvResumeList";
 
 const CvTemplatePreview = () => {
   return (
-    <CarouselTemplate title="CV Template Preview" data={CV_DATA}/>
+    <CarouselTemplate data={CV_DATA}/>
   );
 };
 

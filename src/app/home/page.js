@@ -6,13 +6,13 @@ import Works from './worksSection/Works'
 
 const  HomePage = () => {
   return (
-    <div>
+    <main>
         <Banner />
         <Works />
         <Templates  />
         <ChooseSection />
         <AccordionItem />
-    </div>
+    </main>
   )
 }
 

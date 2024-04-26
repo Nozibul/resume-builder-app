@@ -1,9 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import cvSlice from "./features/cvSlice/cvSlice"
+import resumeSlice from "./features/resumeSlice/resumeSlice"
 import { useMemo } from "react";
 import { persistReducer } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
-
+import globalSlice from "./features/globalSlice";
+import customSlice from "./features/customSlice";
+import counterSlice from "./features/counterSlice";
 
 // To avoid error (redux-persist failed to create sync storage)
 const createNoopStorage = () => {
@@ -26,11 +29,11 @@ const storage = typeof window !== "undefined" ? createWebStorage("local") : crea
 // combine reducers
 const rootReducer = combineReducers({
     // authReducers,
-    // counterSlice,
+    counterSlice,
     cvSlice,
-    // resumeSlice,
-    // globalSlice,
-    // customSlice,
+    resumeSlice,
+    globalSlice,
+    customSlice,
 });
 
 // persist config
@@ -44,7 +47,16 @@ const persistConfig = {
     blacklist: ["counterSlice", "authReducers", "customSlice"],
 };
 
-
+// Function to create the persisted reducer with updated persistConfig
+// const createPersistedReducer = (blacklist = []) => {
+//     return persistReducer(
+//         {
+//             ...persistConfig,
+//             blacklist: ["counterSlice", "authReducers", ...blacklist],
+//         },
+//         rootReducer
+//     );
+// };
 
 // we put global store into this
 let store;
@@ -62,6 +74,7 @@ function makeStore(initialState = {}) {
                 serializableCheck: false,
                 immutableCheck: false,
             }),
+        //.concat(logger),
     });
 }
 
@@ -93,3 +106,9 @@ export function useStore(initialState) {
     const store = useMemo(() => initializeStore(initialState), [initialState]);
     return store;
 }
+
+// Update the persisted reducer based on login state
+// export const updatePersistedReducer = (loggedIn = false) => {
+//     const blacklist = loggedIn ? ["cvSlice", "resumeSlice"] : [];
+//     store.replaceReducer(createPersistedReducer(blacklist));
+// };
