@@ -107,8 +107,3 @@ export function useStore(initialState) {
     return store;
 }
 
-// Update the persisted reducer based on login state
-// export const updatePersistedReducer = (loggedIn = false) => {
-//     const blacklist = loggedIn ? ["cvSlice", "resumeSlice"] : [];
-//     store.replaceReducer(createPersistedReducer(blacklist));
-// };
